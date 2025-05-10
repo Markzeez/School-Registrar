@@ -1,1 +1,32 @@
+@font-face{
+  font-family: 'Roboto';
+  src: url('../src/assets/fonts/Roboto-Regular.ttf') ;
+}
+
+/* width*/
+::-webkit-scrollbar {
+width: 3px;
+height: 4px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+background: rgb(167, 205, 243);
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #156a91;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #959696ad;
+border-radius: 5px;
+}  
+
 @import "tailwindcss";
+
+/* @theme {
+  --font-Roboto: Roboto, "sans-serif";
+} */
