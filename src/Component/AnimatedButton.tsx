@@ -14,7 +14,7 @@ const AnimatedButton = () => {
 
   return (
     <button
-      className={`w-[455px] h-[40px] flex items-center justify-center gap-2 rounded-[100px_0px_0px_0px] bg-[#007F00] opacity-100 ${
+      className={`w-[455px] h-[40px] flex items-center justify-center gap-2 rounded-[100px_50px_25px_1px] bg-[#487ad6] opacity-100 ${
         clicked ? 'animate-buttonClick' : ''
       }`}
       onClick={handleClick}
