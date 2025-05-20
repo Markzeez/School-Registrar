@@ -11,42 +11,42 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <MdAssignmentTurnedIn size={50} />,
+    icon: <MdAssignmentTurnedIn size={30} />,
     title: 'Attendance Tracking',
     description:
       'Easily mark and monitor student attendance with real-time updates accessible by teachers, students, and parents.',
-    bgColor: 'bg-green-100',
+    bgColor: 'bg-blue-700/30',
   },
   {
-    icon: <FaUserGraduate size={50} />,
+    icon: <FaUserGraduate size={30} />,
     title: 'Student Record Management',
     description:
       'Manage detailed student profiles including academic records, performance, and enrollment history.',
-    bgColor: 'bg-blue-100',
+    bgColor: 'bg-blue-600/50',
   },
   {
-    icon: <FaShieldAlt size={50} />,
+    icon: <FaShieldAlt size={30} />,
     title: 'Data Security',
     description:
       'We prioritize your data security with encrypted systems ensuring only authorized access to sensitive student information.',
-    bgColor: 'bg-yellow-100',
+    bgColor: 'bg-blue-900/40',
   },
   {
-    icon: <FaChalkboardTeacher size={50} />,
+    icon: <FaChalkboardTeacher size={30} />,
     title: 'Teacher & Parent Portal',
     description:
       'Enable seamless communication between teachers and parents with announcements, progress updates, and feedback tools.',
-    bgColor: 'bg-purple-100',
+    bgColor: 'bg-blue-800/10',
   },
 ];
 
-const FeatureCard: React.FC<Feature> = ({ icon, title, description, bgColor }) => {
+const FeatureCard: React.FC<Feature> = ({  title, description, bgColor }) => {
   return (
-    <div className={`${bgColor} p-4 rounded-md flex items-start gap-3`}>
-      <div>{icon}</div>
+    <div className={`${bgColor} mx-auto p-4 my-2 rounded-2xl flex items-start gap-4`}>
+      
       <div>
         <h3 className="text-sm font-semibold mb-2">{title}</h3>
-        <p className="text-xs">{description}</p>
+        <p className="text-[10px] ">{description}</p>
       </div>
     </div>
   );

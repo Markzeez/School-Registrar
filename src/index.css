@@ -1,11 +1,13 @@
-@font-face{
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=family=Roboto:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* @font-face{
   font-family: 'Roboto';
   src: url('../src/assets/fonts/Roboto-Regular.ttf') ;
-}
+} */
 
 /* width*/
 ::-webkit-scrollbar {
-width: 3px;
+width: 4px;
 height: 4px;
 }
   
@@ -21,11 +23,13 @@ background: #156a91;
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background: #959696ad;
+background: #5e5f5fad;
 border-radius: 5px;
 }  
 
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* @theme {
   --font-Roboto: Roboto, "sans-serif";

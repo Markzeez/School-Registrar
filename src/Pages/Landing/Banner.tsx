@@ -5,12 +5,12 @@ function Banner() {
       <div className="flex-1 mb-10 md:mb-0 text-center md:text-left mx-[45px]">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-snug">
           Smart <span className="text-[#487ad6]">Attendance Solutions</span> <br />
-          for Schools and Parents
+          for Student and Teachers
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-black max-w-md mx-auto md:mx-0">
-          We build tools to help schools track attendance efficiently, allowing parents to stay informed in real-time.
+        <p className="mt-4 text-base sm:text-lg text-[#0f0f0f] max-w-md mx-auto md:mx-0">
+          We build tools to help schools track attendance efficiently, and for parent to be able view attendance performance of their children allowing parents to stay informed in real-time.
         </p>
-        <button className="mt-10 w-40 h-10 bg-[#487ad6] text-black hover:text-white rounded transition-colors duration-200">
+        <button className="w-[150px] bg-[#487ad6] text-white font-bold rounded-full px-4 py-3 hover:bg-blue-600">
           Get Started
         </button>
       </div>

@@ -4,7 +4,7 @@ import { FaLocationPin } from "react-icons/fa6"
 
 
 
-function Contactus() {
+function ContactUs() {
   return (
     <div className="w-full h-screen p-4 ">
       <div>
@@ -27,31 +27,31 @@ function Contactus() {
         </div>
         <div className="flex flex-row ">
           <CiMail color="" size={25} className="text-black"/>
-            <p>Support@shopfromteepha.com</p>
+            <p>Support@ClassPulse.com</p>
           </div>
           <div className="flex flex-row">
           <FaLocationPin  size={25} color="" className="text-black"/>
             <p>Lagos,Nigeria</p>
           </div> 
       </div>
-      <div className="w-[600px] h-[400px] bg-[#deb5de]  rounded-lg  px-6 mx-auto space-y-3">
+      <div className="w-[600px] h-[400px] bg-[#487ad6]  rounded-lg  px-6 mx-auto space-y-3">
         <form action="" >
           {/* <div className="flex flex-row gap-8 mt-[100px] py-8"> */}
           <div className="flex flex-col mt-[20px] py-8 ">
             <input type="text"
             placeholder="Name"
-            className="border-b border-gray-800 w-[400px] bg-[#deb5de] text-white" />
+            className="border-b border-gray-800 w-[400px]  text-white" />
           </div>
           <div className="flex flex-col">
             <input type="email"
             placeholder="Email"
-            className="border-b border-gray-800 w-[400px] outline-none bg-[#deb5de] text-white" />
+            className="border-b border-gray-800 w-[400px] outline-none  text-white" />
           </div>
           {/* </div> */}
           <div className="flex flex-col">
             <textarea 
             placeholder="Message"
-            className="border-b border-gray-800 w-[400px] outline-none pt-[10px] bg-[#deb5de] text-white"
+            className="border-b border-gray-800 w-[400px] outline-none pt-[10px] text-white"
             rows={4}
             maxLength={200}
              />
@@ -60,10 +60,10 @@ function Contactus() {
         </form>
       </div>
     </div>
-    {/* <GeoLocation/> */}
+    
     
     </div>
   )
 }
 
-export default Contactus
+export default ContactUs

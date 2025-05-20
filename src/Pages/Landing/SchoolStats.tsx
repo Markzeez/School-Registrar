@@ -104,7 +104,7 @@ const SchoolStats = () => {
           <StatItem value={<CountUp end={25} />} label="Campuses" />
           <StatItem value={<CountUp end={12500} />} label="Students Enrolled" />
           <StatItem value={<CountUp end={350} />} label="Teachers" />
-          <StatItem value={<CountUp end={95} />} label="Available Courses" />
+          <StatItem value={<CountUp end={95} />} label="Classes" />
         </div>
       </div>
     </div>

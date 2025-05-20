@@ -29,16 +29,23 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  cssEase: 'ease-in-out',
+  
+  
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  
+  
   responsive: [
     {
       breakpoint: 1024,
-      settings: { slidesToShow: 2 },
+      settings: { slidesToShow: 3 },
     },
     {
       breakpoint: 768,
-      settings: { slidesToShow: 1 },
+      settings: { slidesToShow: 3 },
     },
   ],
 };
@@ -63,7 +70,7 @@ const CardCarousel = () => {
   return (
     <section className="w-full bg-[#487ad6] text-[#ffffff] px-4 py-12">
       <h2 className="text-4xl lg:text-5xl font-bold text-center mb-10 ">
-        Join over 1 million <br />
+        Join over 1 thousands <br />
         user
       </h2>
 
