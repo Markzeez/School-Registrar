@@ -1,10 +1,10 @@
 
 
 const steps = [
-  { title: 'Create Account', desc: 'Create an account for the student to get started.' },
-  { title: 'Register Courses', desc: 'Select the courses the student will be attending.' },
-  { title: 'View Attendance', desc: 'Monitor student attendance throughout the semester.' },
-  { title: 'Payment', desc: 'Make payments for the attendance registration via paystack.' },
+  { title: 'Create Account', desc: 'Create an account for the role you want.'},
+  { title: 'Update your Data', desc: 'Add other information needed.' },
+  { title: 'Payment', desc: 'Make payments for the attendance registration via Paystack.' },
+  { title: 'View Dashboard', desc: 'Monitor student attendance throughout the session.' },
 ];
 
 const HeroSection = () => {
@@ -18,10 +18,10 @@ const HeroSection = () => {
       {/* Right Content */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
-          Simple <span className="text-[#487ad6]">School Registration</span>
+          Simple <i><span className="text-[#487ad6]">School Registration</span></i>
         </h2>
-        <p className="text-sm text-gray-600 mb-6">
-          We make the student registration process easy and efficient. From enrollment to payments, we got you covered!
+        <p className="text-sm text-gray-600 mb-6 font-Roboto">
+          We make the student registration process easy and efficient. From<br /> enrollment to payments, we got you covered!
         </p>
 
         <ol className="space-y-4">

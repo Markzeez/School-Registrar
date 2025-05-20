@@ -8,13 +8,13 @@ const AnimatedButton = () => {
     setTimeout(() => {
       // Redirect to Sign Up Screen or perform the swap overlay action here
       console.log('Redirecting to Sign Up Screen...');
-      // window.location.href = '/sign-up'; // Example redirect
+    //   window.location.href = '/sign-up'; // Example redirect
     }, 500); // Match the animation duration
   };
 
   return (
     <button
-      className={`w-[455px] h-[40px] flex items-center justify-center gap-2 rounded-[100px_50px_25px_1px] bg-[#487ad6] opacity-100 ${
+      className={`w-[150px] h-[40px] flex items-center justify-center gap-2 rounded-[100px_50px_50px_100px] bg-[#487ad6] opacity-100 ${
         clicked ? 'animate-buttonClick' : ''
       }`}
       onClick={handleClick}

@@ -2,12 +2,11 @@ const PUBLIC_ROUTES = {
     LANDINGPAGE: "/",
     HOME: "/home",
   
-    STUDENT_PROFILE: "/goufer_profile",
+    PROFILE: "/profile",
     DASHBOARD: "/dashboard",
-    CHAT: "/chat",
     FAVORITE: "/favorite",
-    EMPLOYMENT: "/employment",
-    ACCOUNT_SETTINGS: "/account_settings",
+    PROFILE_SETTINGS: "/profile_settings",
+    
     PAYMENT: "/payment",
   
     PAYMENT_CHANGE: "/changePayment",
@@ -20,11 +19,11 @@ const PUBLIC_ROUTES = {
     //NAV BAR
     ABOUT_US: "/about",
     CONTACT_US: "/contact",
-    CATEGORIES: "/categories",
+    SERVICE: "/service",
   
     LOGIN: "/login",
     SIGNUP: "/signup",
-    FIND_GOFER: "/find_gofer",
+    
   
     //HERO SECTION
     SEARCH: "/search",
