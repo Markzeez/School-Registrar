@@ -1,69 +1,59 @@
-import { CiMail, CiPhone } from "react-icons/ci"
-import { FaLocationPin } from "react-icons/fa6"
+// ContactForm.tsx
+import React from 'react';
+import { Facebook, Twitter, Linkedin, PhoneCall } from 'lucide-react';
+import Footer from '../../Component/Footer';
+import Navbar from '../../Component/Navbar';
 
-
-
-
-function ContactUs() {
+const ContactForm: React.FC = () => {
   return (
-    <div className="w-full h-screen p-4 ">
-      <div>
-      <h1 className="text-center text-4xl font-semibold">Contact US</h1>
-      <p className="text-center text-sm mt-2 px-[300px] mb-4 space-y-5 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit.  perferendis inventore provident, eum sint vel sapiente esse debitis ipsa suscipit minus? Dicta quidem quia perferendis expedita porro ipsam ipsa illum aspernatur accusamus dolore?</p>
-    
-      </div>
-      <div className="w-full h-fit  flex flex-row py-3 mx-aut rounded-lg">
-      <div className="rounded-lg w-[500px] h-[450px]  px-6 mx-auto space-y-6  ">
-        <h1 className=" text-3xl font-semibold mt-[100px]">
-          Get In Touch
-        </h1>
-        <p className="text-sm text-black w-[100%]">we'll create high-quality linkable content and build at least 40 high-authortiy</p>
-        <div className="flex flex-row items-center ">
-          <CiPhone color="" size={25} className="mt-1"/>
-          <div className="flex flex-col ">
-            <p>+45566666543</p>
-            {/* <p>+45566666543</p> */}
-          </div>
-        </div>
-        <div className="flex flex-row ">
-          <CiMail color="" size={25} className="text-black"/>
-            <p>Support@ClassPulse.com</p>
-          </div>
-          <div className="flex flex-row">
-          <FaLocationPin  size={25} color="" className="text-black"/>
-            <p>Lagos,Nigeria</p>
-          </div> 
-      </div>
-      <div className="w-[600px] h-[400px] bg-[#487ad6]  rounded-lg  px-6 mx-auto space-y-3">
-        <form action="" >
-          {/* <div className="flex flex-row gap-8 mt-[100px] py-8"> */}
-          <div className="flex flex-col mt-[20px] py-8 ">
-            <input type="text"
-            placeholder="Name"
-            className="border-b border-gray-800 w-[400px]  text-white" />
-          </div>
-          <div className="flex flex-col">
-            <input type="email"
-            placeholder="Email"
-            className="border-b border-gray-800 w-[400px] outline-none  text-white" />
-          </div>
-          {/* </div> */}
-          <div className="flex flex-col">
-            <textarea 
-            placeholder="Message"
-            className="border-b border-gray-800 w-[400px] outline-none pt-[10px] text-white"
-            rows={4}
-            maxLength={200}
-             />
-          </div>
-          <button className="w-[120px] p-2  rounded-full mt-3 text-white">Submit</button>
-        </form>
-      </div>
-    </div>
-    
-    
-    </div>
-  )
-}
+    <>
+    <Navbar/>
+    <div className="min-h-screen bg-white text-black px-6 py-12 ">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl font-bold mt-[50px] mb-2">CONTACT US</h2>
+        <p className="mb-8 text-gray-400">We are looking forward to hearing from you soon</p>
 
-export default ContactUs
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* Address and Socials */}
+          <div>
+            <div className="mb-6">
+              <p className="font-semibold mb-1">ADDRESS</p>
+              <p className="text-gray-400">
+                ClassPulse<br />
+                22 Kosoko street<br />
+                Keke Agege<br />
+                Lagos, State<br />
+                Nigeria
+              </p>
+            </div>
+
+            <div className="flex space-x-4 mt-4">
+              <Facebook className="text-black hover:text-blue-500 cursor-pointer" />
+              <Twitter className="text-black hover:text-blue-400 cursor-pointer" />
+              <Linkedin className="text-black hover:text-blue-300 cursor-pointer" />
+              <PhoneCall className="text-black hover:text-green-400 cursor-pointer" />
+            </div>
+          </div>
+
+          {/* Form */}
+          <form className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <input type="text" placeholder="Name" className="bg-blue-100 p-3 rounded text-black" />
+              <input type="email" placeholder="Email" className="bg-blue-100 p-3 rounded text-black" />
+              <input type="text" placeholder="Phone" className="bg-blue-100 p-3 rounded text-black" />
+              <input type="text" placeholder="Address" className="bg-blue-100 p-3 rounded text-black" />
+            </div>
+            <textarea placeholder="Message" className="bg-blue-100 p-3 rounded w-full h-32 text-black"></textarea>
+            <button type="submit" className="bg-blue-300 text-white px-6 py-2 rounded hover:bg-blue-500">DONE</button>
+          </form>
+        </div>
+
+       
+      </div>
+    </div>
+    <Footer/>
+    </>
+  );
+};
+
+export default ContactForm;

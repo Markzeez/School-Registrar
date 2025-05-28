@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Hamburger and close icons
 
 
+
 const Sidebar: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ const Sidebar: React.FC = () => {
   return (
     <div>
       {/* Mobile Hamburger Menu */}
-      <div className="lg:hidden fixed top-[-20px] left-0 p-4 z-50 w-full flex justify-between items-center">
+      <div className="lg:hidden  fixed top-0 left-0 p-4 z-50 w-full flex justify-between items-center">
         <Logo isCollapsed={false} label="Full Logo" />
         <button onClick={toggleMobileMenu} className="text-2xl focus:outline-none">
           {isMobileMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -35,13 +36,13 @@ const Sidebar: React.FC = () => {
 
       {/* Sidebar for large screens */}
       <div
-        className={`hidden lg:flex flex-col fixed ml-1 mt-[12px] text-sm dark:bg-gray-900 text-black dark:text-white ${
+        className={`hidden lg:flex flex-col fixed  mt-[55px] text-sm dark:bg-gray-900  text-black dark:text-white ${
           isCollapsed ? `w-[100px]` : `w-[200px]`
-        } h-screen bg-white transition-width duration-300`}
+        } h-screen bg-yellow-400 transition-width duration-300`}
       >
         <nav className="flex flex-col mt-4 space-y-1">
           
-          <Link to="/home">
+          <Link to={"/home"}>
             <MenuItem isCollapsed={isCollapsed} icon={<BiHome />} label="Home" />
           </Link>
          <Link to={"/attendance"}> <MenuItem isCollapsed={isCollapsed} icon={<MdEvent />} label="Attendance" /></Link>
@@ -60,7 +61,7 @@ const Sidebar: React.FC = () => {
 
           <Profile
             isCollapsed={isCollapsed}
-            name="Rudra Devi"
+            name="Azeez ibrahim"
             email="rudra.devi@gmail.com"
             imageUrl="https://www.pexels.com/photo/street-photography-18718906/"
           />

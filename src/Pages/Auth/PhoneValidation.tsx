@@ -1,81 +1,98 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import OtpInput from '../Auth/VerifyOTP';
+// import OtpInput from '../Auth/VerifyOTP';
 
 const PhoneValidation = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [valid, setValid] = useState(true);
   const [showOtpInput, setShowOtpInput] = useState(false);
 
-  const handleChange = (value) => {
+  const handleChange = (value: string) => {
     setPhoneNumber(value);
     setValid(validatePhoneNumber(value));
   };
 
-  const validatePhoneNumber = (phoneNumber) => {
-    const phoneNumberPattern = /^\d{10}$/;
-    return phoneNumberPattern.test(phoneNumber);
+  const validatePhoneNumber = (number: string) => {
+    const pattern = /^\d{10}$/;
+    return pattern.test(number);
   };
 
-  const OnOtpSubmit = (otp) => {
-    console.log('Login Successful', otp);
+  // const handleOtpSubmit = (otp: string) => {
+  //   console.log('Login Successful', otp);
+  // };
+
+  const handleSendCode = () => {
+    if (valid) {
+      setShowOtpInput(true);
+    }
   };
+
+  const renderPhoneInputSection = () => (
+    <div className="flex flex-col items-center mx-auto mt-12 w-[350px] p-5 bg-white rounded-lg shadow-lg">
+      <label className="mb-2 w-full">
+        Phone Number:
+        <PhoneInput
+          country={'us'}
+          value={phoneNumber}
+          onChange={handleChange}
+          inputProps={{ required: true }}
+          containerClass="w-full mt-2"
+        />
+      </label>
+
+      {!valid && (
+        <p className="text-red-600 text-xs mt-2">
+          Please enter a valid phone number!
+        </p>
+      )}
+
+      <button
+        className="w-full mt-4 text-white text-sm py-2 rounded-lg bg-green-700 hover:bg-[#789178]"
+        type="submit"
+        onClick={handleSendCode}
+      >
+        Send the Code
+      </button>
+    </div>
+  );
+
+  const renderOtpSection = () => (
+    <div className="flex flex-col items-center mx-auto mt-8 w-[350px] space-y-3 p-5 bg-white rounded-lg shadow-lg">
+      <p>Enter OTP sent to {phoneNumber}</p>
+      {/* <OtpInput length={6} onOtpSubmit={handleOtpSubmit} /> */}
+
+      <button
+        className="w-full text-white text-sm py-2 rounded-lg bg-green-700 hover:bg-[#789178]"
+        type="submit"
+      >
+        Verify Phone Number
+      </button>
+
+      <div className="flex justify-between w-full text-xs mt-2">
+        <button
+          className="text-blue-500"
+          onClick={() => setShowOtpInput(false)}
+        >
+          Edit phone number?
+        </button>
+        <button className="text-green-700">
+          Send again
+        </button>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-full bg-[#f5f5f5]">
-      <div className="text-center mx-auto">
-        <h2 className="text-[20px] font-semibold">Phone Verification</h2>
-        <p className="text-xs">
-          We need to register phone number before getting started!
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100">
+      <div className="text-center">
+        <h2 className="text-lg font-semibold">Phone Verification</h2>
+        <p className="text-xs text-gray-600">
+          We need to register your phone number before getting started!
         </p>
       </div>
 
-      {!showOtpInput && (
-        <div className="flex flex-col items-center mx-auto mt-[50px] w-[350px] p-[20px] bg-[#ffffff] rounded-lg shadow-lg">
-          <label className="mb-[10px]" htmlFor="">
-            Phone Number :
-            <PhoneInput
-              country={'us'}
-              value={phoneNumber}
-              onChange={handleChange}
-              inputProps={{
-              required: true,
-              }}
-            />
-          </label>
-          {!valid && (
-            <p className="text-red-600 text-xs mt-[10px]">
-              Please enter a valid phone number!
-            </p>
-          )}
-          <button
-            className="w-[300px] text-white text-[14px] py-2 rounded-lg bg-[#007f00] cursor-pointer hover:bg-[#789178]"
-            type="sumbit"
-            onClick={()=>setShowOtpInput(true)}
-          >
-            Send the Code
-          </button>
-        </div>
-      )}
-
-      {showOtpInput && (
-        <div className='flex flex-col items-center mx-auto mt-[30px] w-[350px] space-y-3 p-[20px] bg-[#ffffff] rounded-lg shadow-lg'>
-          <p>Enter OTP sent to {phoneNumber}</p>
-          <OtpInput length={6} onOtpSubmit={OnOtpSubmit} />
-          <button
-            className="w-[300px] text-white text-[14px] py-2 rounded-lg bg-[#007f00] cursor-pointer hover:bg-[#789178]"
-            type="sumbit"
-           
-          >
-            Verify Phone Number
-          </button>
-          <div className='flex flex-row justify-between text-xs space-x-4 '>
-          <p className='mr-[100px]'>Edit phone number?</p>
-          <p className='ml-[100px] text-[#007f00]' >Send again</p>
-          </div>
-        </div>
-      )}
+      {!showOtpInput ? renderPhoneInputSection() : renderOtpSection()}
     </div>
   );
 };

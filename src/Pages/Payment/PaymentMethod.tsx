@@ -7,17 +7,17 @@ const PaymentMethod = ({ setShowComponent }:appState) => {
     <div className="w-screen h-fit flex flex-col items-center z-10 fixed left-0 right-0 top-0 bottom-0 backdrop-blur-sm  bg-[#101c161d]">
       <div className="m-auto flex flex-col items-center  mx-auto w-[450px] h-[590px] hover:shadow-lg shadow-md bg-white rounded-[15px] mt-2 gap-2">
         <div className="flex flex-col items-center w-[432px] h-[500px] mt-4 font-Roboto">
-          <div className="flex justify-center items-center bg-blue-400 bg-gradient-to-l  w-[432px] h-[250px] rounded-[8px]">
+          <div className="flex justify-center items-center bg-[#487ad6] bg-gradient-to-l  w-[432px] h-[250px] rounded-[8px]">
             <div className=" flex flex-col w-[316px] h-[190px] rounded-[20px] shadow-lg p-4 bg-blue-200/10 bg-opacity-20 backdrop-filter backdrop-blur-lg border border-white">
               <div className="flex flex-col  w-[280px] h-[170px] justify-between">
                 <div className="flex flex-row justify-between w-[280px]">
                   <img
-                    src="./images/gouferwhite.svg"
+                    src="./gouferwhite.svg"
                     alt=""
                     className="w-[42px] h-[13px]"
                   />
                   <img
-                    src="./images/PayPass icon.svg"
+                    src="./PayPass icon.svg"
                     alt=""
                     className="w-[20px] h-[24px]"
                   />
@@ -111,8 +111,8 @@ const PaymentMethod = ({ setShowComponent }:appState) => {
           >
             Cancel
           </button>
-          <button className="w-[210px] h-[40px] rounded-[50px] bg-blue-400 hover:bg-blue-600 transition-colors duration-300 text-white">
-            Add
+          <button className="w-[210px] h-[40px] rounded-[50px] bg-[#487ad6] hover:bg-blue-600 transition-colors duration-300 text-white">
+            Pay
           </button>
         </div>
       </div>

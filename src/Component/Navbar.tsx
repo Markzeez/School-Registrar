@@ -1,13 +1,13 @@
 import { useState } from "react";
 import LogoBlue from "../assets/LogoBlue.png";
 import { Link } from "react-router-dom"
-import { toast } from 'react-toastify'
+// import { toast } from 'react-toastify'
 
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <div className="fixed top-[-10px] left-0 w-full h-[60px] mt-1 bg-white z-20 border-b-1 border-[#0303036f]">
+    <div className="fixed top-[-10px] left-0 w-full h-[60px] mt-1 bg-white z-20 border-b-1 border-[#6964646f]">
       <div className="flex justify-between items-center w-full py-2 px-6 md:px-10">
         {/* Logo and Title */}
         <Link to={"/"}>

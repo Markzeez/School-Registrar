@@ -3,12 +3,10 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { BiHide, BiShow } from 'react-icons/bi';
 import { useNavigate, Link } from 'react-router-dom';
 import validateLogin, { LoginValues, LoginErrors } from './LoginValidation';
+import { toast } from 'react-toastify';
 
 export default function Login() {
-  const [values, setValues] = useState<LoginValues>({
-    email: '',
-    password: '',
-  });
+  const [values, setValues] = useState<LoginValues>({ email: '', password: '' });
   const [errors, setErrors] = useState<LoginErrors>({});
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -19,17 +17,22 @@ export default function Login() {
   }
 
   function toggleShow() {
-    setShowPassword(v => !v);
+    setShowPassword(prev => !prev);
   }
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const validation = validateLogin(values);
     setErrors(validation);
+
     if (Object.keys(validation).length === 0) {
-      // TODO: call your login API
-      // e.g. axios.post('/login', values).then(() => navigate('/home'))
-      navigate('/home');
+      // TODO: Replace with actual login logic (e.g., API call)
+      toast.success('Login successful! Redirecting...');
+      setTimeout(() => {
+        navigate('/home');
+      }, 1500);
+    } else {
+      toast.error('Please fix the highlighted errors.');
     }
   }
 
@@ -73,11 +76,7 @@ export default function Login() {
                 placeholder="Enter password"
                 className="w-full p-2 outline-none"
               />
-              <button
-                type="button"
-                onClick={toggleShow}
-                className="p-2"
-              >
+              <button type="button" onClick={toggleShow} className="p-2">
                 {showPassword ? <BiShow /> : <BiHide />}
               </button>
             </div>
