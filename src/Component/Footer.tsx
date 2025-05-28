@@ -1,6 +1,7 @@
 import { BiArrowToTop } from "react-icons/bi";
-import QRCode from "react-qr-code";
+// import QRCode from "react-qr-code";
 import EmailSubscription from "../Pages/Subscription/EmailSubscription";
+import LogoBlue from "../assets/LogoBlue.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,11 +13,22 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative z-0 px-4 py-8 bg-white">
+    <footer className="relative z-0 px-4 py-8 bg-blue-100/10  ">
+
+       
       {/* Main Footer Content */}
-      <div className="flex flex-col lg:flex-row justify-evenly items-start gap-10">
+      <div className="flex flex-col lg:flex-row justify-evenly items-start gap-6">
+
+        <div className="flex items-center gap-2">
+          <img
+            src={LogoBlue}
+            className="w-[250px] h-[50px] object-cover mt-0.5 "
+            alt="ClassPulse logo"
+          />
+
+        </div>
         {/* Links Grid */}
-        <div className="grid grid-cols-3 gap-y-2 text-xs w-full max-w-xl">
+        <div className="grid grid-cols-3 gap-y-2 text-xs w-full max-w-xl ">
           {Object.entries(footerLinks).map(([section, items]) => (
             <div key={section}>
               <b className="block mb-1">{section}</b>
@@ -52,14 +64,14 @@ const Footer = () => {
       <div className="">
         <select
           aria-label="Language selector"
-          className="bg-white outline-none text-sm border px-2 py-1 rounded"
+          className="bg-white outline-none text-xs border px-2 py-1 rounded"
         >
           <option>English (United Kingdom)</option>
         </select>
       </div>
 
       {/* Footer Note */}
-      <div className="text-center py-4 text-sm bg-[#487ad6] text-white rounded-t-[120%]">
+      <div className="text-center py-2 text-sm bg-[#487ad6] text-white rounded-t-[120%]">
         © {currentYear} ClassPulse.
       </div>
 

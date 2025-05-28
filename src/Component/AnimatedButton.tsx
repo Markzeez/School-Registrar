@@ -1,23 +1,19 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const AnimatedButton = () => {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
     setClicked(true);
-    setTimeout(() => {
-      // Redirect to Sign Up Screen or perform the swap overlay action here
-      console.log('Redirecting to Sign Up Screen...');
-    //   window.location.href = '/sign-up'; // Example redirect
-    }, 500); // Match the animation duration
+    setTimeout(() => setClicked(false), 300); // Reset animation
   };
 
   return (
     <button
-      className={`w-[150px] h-[40px] flex items-center justify-center gap-2 rounded-[100px_50px_50px_100px] bg-[#487ad6] opacity-100 ${
-        clicked ? 'animate-buttonClick' : ''
-      }`}
       onClick={handleClick}
+      className={`bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-transform duration-300 
+        ${clicked ? "scale-90" : "scale-100"}
+      `}
     >
       Click Me
     </button>

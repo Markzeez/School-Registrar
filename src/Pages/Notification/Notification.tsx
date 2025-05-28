@@ -54,7 +54,7 @@ const sampleLogs = [
 const itemsPerPage = 5;
 
 const RegistrarActivity = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<{ value: string; label: string } | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchKeyword, setSearchKeyword] = useState("");
 
