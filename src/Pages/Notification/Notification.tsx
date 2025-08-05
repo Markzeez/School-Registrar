@@ -26,25 +26,25 @@ const sampleLogs = [
   },
   {
     name: 'Tolu Martins',
-    activity: "Updated contact information",
+    activity: "Updated Contact information",
     date: 'Today at 09:10 AM',
     imgSrc: 'https://res.cloudinary.com/dyjo2mvqb/image/upload/v1718970028/user-04.jpg_vh1g5p.svg',
   },
    {
     name: 'Tolu Martins',
-    activity: "Updated contact information",
+    activity: "Updated Contact information",
     date: 'Today at 09:10 AM',
     imgSrc: 'https://res.cloudinary.com/dyjo2mvqb/image/upload/v1718970028/user-04.jpg_vh1g5p.svg',
   },
    {
     name: 'Tolu Martins',
-    activity: "Updated contact information",
+    activity: "Updated Contact information",
     date: 'Today at 09:10 AM',
     imgSrc: 'https://res.cloudinary.com/dyjo2mvqb/image/upload/v1718970028/user-04.jpg_vh1g5p.svg',
   },
    {
     name: 'Tolu Martins',
-    activity: "Updated contact information",
+    activity: "Updated Contact information",
     date: 'Today at 09:10 AM',
     imgSrc: 'https://res.cloudinary.com/dyjo2mvqb/image/upload/v1718970028/user-04.jpg_vh1g5p.svg',
   }

@@ -22,38 +22,22 @@ const features: Feature[] = [
     description:
       'Easily mark and monitor student attendance with real-time updates accessible by teachers, students, and parents, ensuring accurate records and timely interventions.',
     bgColor: 'bg-slate-100',
-  },
-  {
-    icon: <ShieldCheck size={30} color="white" />,
-    title: 'Comprehensive Student Profile Spotlight: Celebrating Achievements & Growth',
-    description:
-      'Our enhanced student profile spotlight goes beyond basic information, offering a dynamic and engaging visual representation of each student\'s unique journey. It highlights academic achievements, extracurricular involvement, personal milestones, and areas of growth. This comprehensive view helps educators, parents, and students themselves recognize strengths and identify opportunities for further development, fostering a holistic understanding of every individual.',
-    bgColor: 'bg-black',
-    image:
-      'https://res.cloudinary.com/dnyzybzho/image/upload/v1753278912/Gemini_Generated_Image_dyq2qcdyq2qcdyq2_enfxzj.png',
-    special: true,
-  },
-  {
+},
+{
     icon: <GraduationCap size={30} />,
     title: 'Advanced Student Record Management',
     description:
-      'Manage detailed student profiles including comprehensive academic records, performance analytics, disciplinary history, and enrollment information, providing a complete overview for administrative efficiency.',
+    'Manage detailed student profiles including comprehensive academic records, performance analytics, disciplinary history, and enrollment information, providing a complete overview for administrative efficiency.',
     bgColor: 'bg-slate-100',
-  },
-  {
+},
+{
     icon: <Users size={30} />,
     title: 'Integrated Teacher & Parent Portal',
     description:
-      'Enable seamless communication and collaboration between teachers and parents through dedicated portals. Access real-time announcements, detailed progress updates, assignment tracking, and direct feedback tools to foster a strong home-school partnership.',
+    'Enable seamless communication and collaboration between teachers and parents through dedicated portals. Access real-time announcements, detailed progress updates, assignment tracking, and direct feedback tools to foster a strong home-school partnership.',
     bgColor: 'bg-slate-100',
-  },
-  {
-    icon: <ShieldCheck size={30} />,
-    title: 'Robust Data Security & Privacy',
-    description:
-      'We prioritize your data security with state-of-the-art encryption systems and strict access controls, ensuring only authorized personnel can view sensitive student and institutional information. Your privacy is paramount.',
-    bgColor: 'bg-slate-100',
-  },
+},
+
 ];
 
 const FeatureCard: React.FC<Feature> = ({ icon, title, description, bgColor, image, special }) => {
@@ -83,7 +67,7 @@ const FeatureCard: React.FC<Feature> = ({ icon, title, description, bgColor, ima
 
 const CardFeature: React.FC = () => {
   return (
-    <section className="p-6 bg-white rounded-lg shadow-lg">
+    <section className="p-6 bg-white rounded-lg ">
       <div className="grid grid-cols-1 md:grid-cols-3 **md:grid-rows-4** gap-4 auto-rows-fr"> {/* Changed grid-rows-2 to md:grid-rows-4 */}
         {features.map((feature, index) => (
           <FeatureCard

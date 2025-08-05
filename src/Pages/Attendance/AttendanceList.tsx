@@ -1,3 +1,4 @@
+// src/pages/Attendance/AttendanceList.tsx (updated)
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
 
@@ -43,7 +44,7 @@ const AttendanceList: React.FC = () => {
   };
 
   return (
-    <div className="p-6 w-fit ml-[300px] bg-red-200 rounded-xl shadow-md">
+    <div className="p-6 bg-white rounded-xl shadow-md w-full"> {/* Removed fixed width and margin, added full width and white background */}
       <div className="flex flex-wrap justify-between items-center gap-4 mb-6">
         <h2 className="text-2xl font-semibold text-black">Student Attendance</h2>
 
@@ -68,13 +69,13 @@ const AttendanceList: React.FC = () => {
         <div className="flex gap-4">
           <button
             onClick={() => setCurrentView('grid')}
-            className={`px-3 py-1 rounded ${currentView === 'grid' ? 'bg-blue-400 text-white' : 'bg-blue-200 text-black'}`}
+            className={`px-3 py-1 rounded ${currentView === 'grid' ? 'bg-blue-600 text-white' : 'bg-blue-200 text-blue-800'}`} 
           >
             Grid View
           </button>
           <button
             onClick={() => setCurrentView('list')}
-            className={`px-3 py-1 rounded ${currentView === 'list' ? 'bg-blue-400 text-white' : 'bg-blue-200 text-black'}`}
+            className={`px-3 py-1 rounded ${currentView === 'list' ? 'bg-blue-600 text-white' : 'bg-blue-200 text-blue-800'}`} 
           >
             List View
           </button>
@@ -83,7 +84,7 @@ const AttendanceList: React.FC = () => {
 
       <div className={currentView === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6' : 'flex flex-col gap-4'}>
         {students.map((student) => {
-          let bgColor = 'bg-gray-200/100';
+          let bgColor = 'bg-gray-100'; // Neutral background
           if (student.status === 'present') bgColor = 'bg-green-100';
           else if (student.status === 'absent') bgColor = 'bg-red-100';
           else if (student.status === 'left') bgColor = 'bg-yellow-100';
@@ -104,13 +105,13 @@ const AttendanceList: React.FC = () => {
                 <div className="flex gap-1">
                   <button
                     onClick={() => markAttendance(student.id, 'present')}
-                    className="bg-green-300 hover:bg-green-600 text-white px-3 py-1 rounded-full text-sm"
+                    className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-full text-sm"
                   >
                     P
                   </button>
                   <button
                     onClick={() => markAttendance(student.id, 'absent')}
-                    className="bg-red-300 hover:bg-red-600 text-white px-3 py-2 rounded-full text-sm"
+                    className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm"
                   >
                     A
                   </button>
@@ -127,7 +128,7 @@ const AttendanceList: React.FC = () => {
         })}
       </div>
 
-      <button className="bg-blue-400 text-white w-[100px] h-[40px] p-2 rounded mt-3">
+      <button className="bg-blue-600 text-white w-[100px] h-[40px] p-2 rounded mt-6 hover:bg-blue-700"> {/* Improved colors and margin */}
         Submit
       </button>
     </div>

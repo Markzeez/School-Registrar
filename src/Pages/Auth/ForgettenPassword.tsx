@@ -1,7 +1,7 @@
 function ForgettenPassword() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white px-4">
-      <div className="w-full max-w-md bg-white border border-gray-300 rounded-xl p-6 shadow-lg">
+      <div className="w-full max-w-sm bg-white border border-gray-300 rounded-xl p-6 shadow-lg">
         <form
           className="flex flex-col gap-3 items-center justify-center "
           action=""

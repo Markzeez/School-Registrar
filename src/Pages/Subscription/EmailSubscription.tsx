@@ -16,31 +16,24 @@ const SchoolUpdatesSubscriptionForm: React.FC = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto p-4 rounded-lg bg-white mt-[-20px] ">
-            
-            <form onSubmit={handleSubscribe}>
-                <div className="flex flex-col items-start space-x-2 space-y-3">
-                <p className="text-xs text-black mb-1">
-                Subscribe to receive updates and important<br/>announcements
-                 directly to your email.
-            </p>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="example123@example.com"
-                        required
-                        className="w-[250px] px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                    />
-                    <button
-                        type="submit"
-                        className="px-4 py-2 text-sm text-white bg-[#487ad6] hover:bg-blue-500 hover:text-black rounded-md transition"
-                    >
-                        Subscribe
-                    </button>
-                </div>
-            </form>
-        </div>
+        <form onSubmit={handleSubscribe} className="flex border border-white p-1 rounded-md overflow-hidden">
+  {/* Your input field */}
+  <input
+    type="email"
+    placeholder="Enter your email"
+    className="flex-grow p-2 bg-transparent text-white focus:outline-none"
+    value={email}
+    onChange={e => setEmail(e.target.value)}
+    required
+  />
+  {/* Your subscribe button */}
+  <button
+    type="submit"
+    className="bg-white hover:bg-blue-700 rounded-2xl text-black px-4 py-2 transition-colors duration-200"
+  >
+    Subscribe
+  </button>
+</form>
     );
 };
 
