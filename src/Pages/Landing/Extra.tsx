@@ -1,6 +1,6 @@
 import { Diameter } from 'lucide-react';
 import React from 'react';
-import { FaLock, FaGraduationCap, FaCode, FaReact, FaCamera, FaLaptopCode, FaTh } from 'react-icons/fa';
+import { FaLock, FaGraduationCap, FaCode, FaReact, FaCamera, FaLaptopCode} from 'react-icons/fa';
 
 const floatingIcons = [
   { icon: <FaLock />, position: 'top-8 left-10' },

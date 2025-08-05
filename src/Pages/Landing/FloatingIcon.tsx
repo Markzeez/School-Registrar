@@ -8,7 +8,6 @@ import {
   Users,
   FileText,
   GraduationCapIcon,
-  Italic,
 } from "lucide-react";
 
 const floatingIcons = [
