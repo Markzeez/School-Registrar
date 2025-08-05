@@ -2,7 +2,6 @@ import React from 'react';
 import {
   CheckSquare,
   GraduationCap,
-  ShieldCheck,
   Users,
 } from 'lucide-react';
 
