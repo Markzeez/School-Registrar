@@ -18,7 +18,7 @@ const PUBLIC_ROUTES = {
   
     //NAV BAR
     ABOUT_US: "/about",
-    CONTACT_US: "/contact",
+    Contact_US: "/Contact",
     SERVICE: "/service",
   
     LOGIN: "/login",

@@ -27,7 +27,8 @@ import About from "./Pages/AboutUs/About";
 import TermCondition from "./Pages/TermsAndConditions.tsx/TermCondition";
 
 // Dashboard & Sidebar
-import RootLayout from "./Pages/Dashboard/RootLayout";
+import RootLayout from "./Pages/Dashboard/Dashboard";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import SideBar from "./Pages/Sidebar/Sidebar";
 import SideNav from "./Pages/Sidebar/SideNav";
 
@@ -45,6 +46,9 @@ import CreateReview from "./Component/CreateReview";
 import Loading from "./Component/Loading";
 import InputSearch from "./Pages/Search/InputSearch";
 import Chart from "./Pages/Chart/Chart";
+import PaymentMethod from "./Pages/Payment/PaymentMethod";
+import StudentRegister from "./Pages/Auth/StudentRegister";
+import MainContent from "./Pages/Dashboard/MainContent";
 
 function App() {
   useEffect(() => {
@@ -87,12 +91,13 @@ function App() {
         <Route path={PUBLIC_ROUTES.HOME} element={<Home />} />
         <Route path={PUBLIC_ROUTES.NOTIFICATION} element={<Notification />} />
         <Route path={PUBLIC_ROUTES.ABOUT_US} element={<About />} />
-        <Route path={PUBLIC_ROUTES.CONTACT_US} element={<ContactUs />} />
+        <Route path={PUBLIC_ROUTES.Contact_US} element={<ContactUs />} />
         <Route path={PUBLIC_ROUTES.SIGNUP} element={<Signup />} />
         <Route path={PUBLIC_ROUTES.LOGIN} element={<Login />} />
         <Route path={PUBLIC_ROUTES.PROFILE} element={<ProfileForm />} />
         <Route path={PUBLIC_ROUTES.TERMS_AND_CONDITIONS} element={<TermCondition />} />
         <Route path="/verify_email" element={<VerifyEmail />} />
+
 
         {/* Auth / OTP */}
         <Route path="/Otp" element={<VerifyOTP />} />
@@ -117,6 +122,20 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/search" element={<InputSearch />} />
         <Route path="/chart" element={<Chart />} />
+        <Route path="/payment" element={<PaymentMethod setShowComponent={() => {}} />} />
+        <Route path="/student" element={<StudentRegister setShowComponent={() => {}} />} />
+          
+
+          <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<AttendanceList />} /> {/* Default route for /dashboard */}
+          <Route path="home" element={<div><h1>Welcome Home!</h1><p>This is your home page content.</p></div>} /> {/* Example Home page */}
+          <Route path="attendance" element={<AttendanceList />} />
+          <Route path="profile" element={<div>Profile Page Content</div>} /> {/* Placeholder */}
+          <Route path="report" element={<MainContent/>} /> {/* Placeholder */}
+          <Route path="calendar" element={<div>Calendar Page Content</div>} /> {/* Placeholder */}
+          <Route path="add-comment" element={<div>Add Comment Page Content</div>} /> {/* Placeholder */}
+          <Route path="setting" element={<div>Setting Page Content</div>} /> {/* Placeholder */}
+        </Route>
 
         {/* 404 Fallback */}
         <Route path="*" element={<Page404 />} />

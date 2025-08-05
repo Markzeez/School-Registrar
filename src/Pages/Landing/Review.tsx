@@ -23,6 +23,12 @@ const testimonials: Testimonial[] = [
     content:
       'This tool has transformed the way our team collaborates. Highly recommended!',
   },
+  {
+    name: 'John Smith',
+    role: 'Software Engineer',
+    content:
+      'The user interface is intuitive and smooth. I use it daily for my projects.',
+  },
 ];
 
 const settings = {
@@ -32,35 +38,31 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 3000,
   cssEase: 'ease-in-out',
-  
-  
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  
-  
+  slidesToShow: 3,
+  slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 1024,
-      settings: { slidesToShow: 3 },
+      settings: { slidesToShow: 2 },
     },
     {
       breakpoint: 768,
-      settings: { slidesToShow: 3 },
+      settings: { slidesToShow: 1 },
     },
   ],
 };
 
 const TestimonialCard = ({ name, role, content }: Testimonial) => (
-  <div className="flex flex-col space-y-8 border-l-2 border-[#ffffff] px-5 mx-4">
-    <p className="text-sm flex items-start gap-2">
-      <MdRateReview className="text-lg text-[#ffffff]" />
+  <div className="bg-[#3c6bc2] p-6 rounded-xl mx-3 h-full flex flex-col justify-between min-h-[200px]">
+    <p className="text-sm text-white mb-4 flex gap-2">
+      <MdRateReview className="text-xl text-white" />
       {content}
     </p>
-    <div className="flex items-center gap-2">
-      <FiUser className="text-lg text-[#ffffff]" />
+    <div className="flex items-center gap-3">
+      <FiUser className="text-lg text-white" />
       <div>
-        <h1 className="font-semibold">{name}</h1>
-        <p className="text-xs text-[#ffffff]">{role}</p>
+        <h1 className="font-semibold text-white">{name}</h1>
+        <p className="text-xs text-white opacity-80">{role}</p>
       </div>
     </div>
   </div>
@@ -68,15 +70,17 @@ const TestimonialCard = ({ name, role, content }: Testimonial) => (
 
 const CardCarousel = () => {
   return (
-    <section className="w-full bg-[#487ad6] text-[#ffffff] px-4 py-12">
-      <h2 className="text-4xl lg:text-5xl font-bold text-center mb-10 ">
-        Join over 1 thousands <br />
-        user
+    <section className="w-full bg-[#487ad6] text-white px-4 py-16">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-10 leading-snug">
+        Join over 3 thousand <br />
+        happy users
       </h2>
 
-      <Slider {...settings} className="w-full lg:w-[80%] mx-auto">
+      <Slider {...settings} className="w-full max-w-6xl mx-auto">
         {testimonials.map((item, index) => (
-          <TestimonialCard key={index} {...item} />
+          <div key={index}>
+            <TestimonialCard {...item} />
+          </div>
         ))}
       </Slider>
     </section>

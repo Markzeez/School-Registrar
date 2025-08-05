@@ -2,12 +2,15 @@ import CardFeature from "../../Component/CardFeature"
 import FloatingIcon from "./FloatingIcon"
 import Footer from "../../Component/Footer"
 import NavBar from "../../Component/Navbar"
-import Faq from "../Faq/Faq"
 import Banner from "./Banner"
 import HeroSection from "./HeroSection"
 import Review from "./Review"
 import SchoolStats from "./SchoolStats"
-import InputSearch from "../Search/InputSearch"
+import Title from "../../Component/Title"
+import HelpDesk from "./HelpDesk"
+import FAQSection from "../Faq/Faq"
+import Extra from "./Extra"
+import HorizontalCard from "../../Component/HorizontalCard"
 
 
 const Index = () => {
@@ -15,13 +18,16 @@ const Index = () => {
     <div className="w-full h-auto">
     <NavBar/>
     <FloatingIcon/>
+    <Title/>
+    <HorizontalCard/>
     <Banner/>
-    <InputSearch/>
     <CardFeature/>
     <HeroSection/>
     <SchoolStats/>
+    <HelpDesk/>
     <Review/>
-    <Faq/>
+    <Extra/>
+    <FAQSection/>
     <Footer/>
     </div>
   )

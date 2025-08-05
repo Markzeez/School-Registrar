@@ -1,13 +1,14 @@
 import { useState } from "react";
 import LogoBlue from "../assets/LogoBlue.png";
 import { Link } from "react-router-dom"
+import { GraduationCap } from "lucide-react";
 // import { toast } from 'react-toastify'
 
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <div className="fixed top-[-10px] left-0 w-full h-[60px] mt-1 bg-white z-20 border-b-1 border-[#6964646f]">
+    <div className="fixed top-[-10px] left-0 w-full h-[60px] mt-1 bg-white z-20 border-b-0.5 shadow-2xl border-[#6964646f]">
       <div className="flex justify-between items-center w-full py-2 px-6 md:px-10">
         {/* Logo and Title */}
         <Link to={"/"}>
@@ -60,12 +61,15 @@ const NavBar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-10 items-center text-base font-semibold ">
-          <Link to={"/contact"} className="cursor-pointer text-[#487ad6] hover:text-blue-700/100">Contact</Link>
-          <Link to={"/service"} className="cursor-pointer  hover:text-[#487ad6]">Services</Link>
-          <Link to={"/About"} className="cursor-pointer hover:text-[#487ad6]">About</Link>
-          <Link to={"signup"} className="bg-[#487ad6] text-white font-bold rounded-full px-5 py-2 hover:text-black">Get Started</Link>
-          <Link to={'/login'} className="text-black font-bold rounded-full px-5 py-2 hover:text-[#487ad6]">Log In</Link>
+        <div className="hidden md:flex gap-10 items-center text-sm font-semibold ">
+          <Link to={"/About"} className="cursor-pointer hover:text-[#487ad6]">About Us</Link>
+          <Link to={"/About"} className="cursor-pointer hover:text-[#487ad6]">FAQ</Link>
+          <Link to={"/About"} className="cursor-pointer hover:text-[#487ad6]">News and Events</Link>
+
+          <Link to={"/Contact"} className="cursor-pointer text-[#487ad6] hover:text-blue-700/100">Contact Us</Link>
+          {/* <Link to={"/service"} className="cursor-pointer  hover:text-[#487ad6]">Services</Link> */}
+          <Link to={"signup"} className=" text-black hover:text-[#487ad6] font-bold rounded-full  ">Student Portal</Link>
+          <Link to={'/login'} className="text-white bg-black hover:bg-[#487ad6]  font-bold rounded-full px-5 py-2 flex gap-2 "><GraduationCap/> Apply</Link>
         </div>
       </div>
 
@@ -75,10 +79,10 @@ const NavBar = () => {
           navbar ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col p-6 gap-4 text-white md:hidden`}
       >
-        <Link to={"/contact"} onClick={() => setNavbar(false)} className="cursor-pointer hover:text-black">Contact</Link>
+        <Link to={"/Contact"} onClick={() => setNavbar(false)} className="cursor-pointer hover:text-black">Contact</Link>
         <Link to={"/service"} onClick={() => setNavbar(false)} className="cursor-pointer hover:text-black">Services</Link>
         <Link to={"/about"} onClick={() => setNavbar(false)} className="cursor-pointer hover:text-black">About</Link>
-        <Link to={"/signup"} onClick={() => setNavbar(false)} className="bg-white text-[#487ad6] font-bold rounded-full px-4 py-2 hover:text-black">Get Started</Link>
+        <Link to={"/signup"} onClick={() => setNavbar(false)} className="bg-white text-[#487ad6] font-bold rounded-full px-4 py-2 hover:text-black">Apply</Link>
         <Link to={"/login"} onClick={() => setNavbar(false)} className="text-white font-bold rounded-full px-4 py-2 border border-white hover:text-black">Log In</Link>
       </div>
     </div>
