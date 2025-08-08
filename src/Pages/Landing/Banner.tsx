@@ -4,24 +4,24 @@ function Banner() {
       {/* Left Content */}
       <div className="text-center md:text-left px-4 md:px-8">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-snug">
-          Smart <span className="text-[#487ad6]">Management Solutions</span>{" "}
-          for Student and Teachers
+          Streamlined <span className="text-[#487ad6]">School Management</span>{" "}
+          for Students, Teachers, and Parents
         </h1>
         <p className="mt-4 text-lg text-[#0f0f0f] max-w-md mx-auto md:mx-0">
-          We build tools to help schools track attendance efficiently, and for parents to view the attendance performance of their children, allowing them to stay informed in real-time.
+          Our platform provides smart tools for tracking student attendance, helping teachers manage classrooms efficiently and keeping parents informed about their children's performance in real time.
         </p>
         {/* Optional CTA Button */}
         {/* <button className="mt-6 bg-[#487ad6] text-white font-bold rounded-full px-6 py-3 hover:bg-blue-600">
-          Apply
+          Get Started
         </button> */}
       </div>
 
       {/* Right Image */}
-      <div className="flex justify-center">
+      <div className="flex justify-center w-full">
         <img
           src="https://res.cloudinary.com/dnyzybzho/image/upload/v1753278903/Gemini_Generated_Image_hw2n5lhw2n5lhw2n_axu4ll.png"
-          alt="Students in class"
-          className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[500px] lg:h-[500px] rounded-3xl object-cover shadow-lg"
+          alt="Students in classroom"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl rounded-3xl object-contain shadow-lg"
         />
       </div>
     </section>

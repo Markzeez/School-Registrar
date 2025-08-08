@@ -6,7 +6,7 @@ import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 const pieData = [
   { name: 'Present', value: 800, style: { fill: '#FFBB28' } },
   { name: 'Late', value: 100, style: { fill: '#FF8042' } },
-  { name: 'Absent', value: 200 },
+  { name: 'Absent', value: 200,style: { fill: '#FFBB28' } },
   
 ];
 

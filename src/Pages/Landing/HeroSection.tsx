@@ -1,7 +1,5 @@
-
-
 const steps = [
-  { title: 'Create Account', desc: 'Create an account for the role you want.'},
+  { title: 'Create Account', desc: 'Create an account for the role you want.' },
   { title: 'Update your Data', desc: 'Add other information needed.' },
   { title: 'Payment', desc: 'Make payments for the attendance registration via Paystack.' },
   { title: 'View Dashboard', desc: 'Monitor student attendance throughout the session.' },
@@ -9,16 +7,20 @@ const steps = [
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col  md:flex-row items-center justify-between bg-blue-50 p-8 rounded-lg shadow-md">
+    <div className="flex flex-col md:flex-row items-center justify-between bg-blue-50 p-8 rounded-lg shadow-md">
       
-      <div className="w-full md:w-1/2 flex justify-center  ">
-        <img src="https://res.cloudinary.com/dnyzybzho/image/upload/v1753278915/Gemini_Generated_Image_6aiypq6aiypq6aiy_kiatlq.png"  alt="School Registrar Illustration" className="max-w-sm object-cover rounded-tr-3xl rounded-bl-3xl" />
+      <div className="w-full md:w-1/2 flex justify-center">
+        <img
+          src="https://res.cloudinary.com/dnyzybzho/image/upload/v1753278915/Gemini_Generated_Image_6aiypq6aiypq6aiy_kiatlq.png"
+          alt="School Registrar Illustration"
+          className="max-w-sm object-cover rounded-tr-3xl rounded-bl-3xl"
+        />
       </div>
 
       {/* Right Content */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
-          Simple <i><span className="text-[#487ad6]">School Registration</span></i>
+          <i><span className="text-[#487ad6]">School Management Features</span></i>
         </h2>
         <p className="text-sm text-gray-600 mb-6 font-Roboto">
           We make the student registration process easy and efficient. From<br /> enrollment to payments, we got you covered!
