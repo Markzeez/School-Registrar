@@ -47,8 +47,9 @@ import Loading from "./Component/Loading";
 import InputSearch from "./Pages/Search/InputSearch";
 import Chart from "./Pages/Chart/Chart";
 import PaymentMethod from "./Pages/Payment/PaymentMethod";
-import StudentRegister from "./Pages/Auth/StudentRegister";
+import StudentRegister from "./Pages/ProcessData/StudentRegister";
 import MainContent from "./Pages/Dashboard/MainContent";
+import Chatbot from "./Pages/Chat/Chatbot";
 
 function App() {
   useEffect(() => {
@@ -124,17 +125,18 @@ function App() {
         <Route path="/chart" element={<Chart />} />
         <Route path="/payment" element={<PaymentMethod setShowComponent={() => {}} />} />
         <Route path="/student" element={<StudentRegister setShowComponent={() => {}} />} />
+        <Route path='/chat' element={<Chatbot/>} />
           
 
-          <Route path="/dashboard" element={<Dashboard />}>
-          <Route index element={<AttendanceList />} /> {/* Default route for /dashboard */}
-          <Route path="home" element={<div><h1>Welcome Home!</h1><p>This is your home page content.</p></div>} /> {/* Example Home page */}
-          <Route path="attendance" element={<AttendanceList />} />
-          <Route path="profile" element={<div>Profile Page Content</div>} /> {/* Placeholder */}
-          <Route path="report" element={<MainContent/>} /> {/* Placeholder */}
-          <Route path="calendar" element={<div>Calendar Page Content</div>} /> {/* Placeholder */}
-          <Route path="add-comment" element={<div>Add Comment Page Content</div>} /> {/* Placeholder */}
-          <Route path="setting" element={<div>Setting Page Content</div>} /> {/* Placeholder */}
+        <Route path="/dashboard" element={<Dashboard />}>
+        <Route index element={<AttendanceList />} /> {/* Default route for /dashboard */}
+        <Route path="home" element={<div><h1>Welcome Home!</h1><p>This is your home page content.</p></div>} /> {/* Example Home page */}
+        <Route path="attendance" element={<AttendanceList />} />
+        <Route path="profile" element={<div>Profile Page Content</div>} /> {/* Placeholder */}
+        <Route path="report" element={<MainContent/>} /> {/* Placeholder */}
+        <Route path="calendar" element={<div>Calendar Page Content</div>} /> {/* Placeholder */}
+        <Route path="add-comment" element={<div>Add Comment Page Content</div>} /> {/* Placeholder */}
+        <Route path="setting" element={<div>Setting Page Content</div>} /> {/* Placeholder */}
         </Route>
 
         {/* 404 Fallback */}

@@ -50,9 +50,9 @@ const Hero = () => {
       </div>
 
       {/* Hero text */}
-      <h1 className="text-3xl md:text-5xl font-bold leading-tight max-w-full md:max-w-4xl z-10 mt-4 px-2">
-        <i className=" leading-tight font-mono text-[#000000] font-extralight">Premonition Student Academy</i> <br />
-        <span className="font-semibold leading-tight text-[#000000]">Through Innovative Education</span>
+      <h1 className=" leading-tight max-w-full md:max-w-4xl z-10 mt-4 px-2">
+        <i className="text-3xl md:text-5xl sm:text-xl leading-tight font-mono text-[#000000] font-extralight">Premonition Student Academy</i> <br />
+        <span className="text-3xl md:text-5xl sm:text-xl font-semibold leading-tight text-[#000000]">Through Innovative Education</span>
       </h1>
 
       {/* Subtext */}

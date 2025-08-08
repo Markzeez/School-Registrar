@@ -1,69 +1,65 @@
 import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
-const TermCondition = () => {
+const TermsAndConditions = () => {
   const navigate = useNavigate();
 
-  const handleCancel = () => {
+  const handleClose = () => {
     navigate("/");
   };
 
   return (
-    <div
-      className="relative bg-gradient-to-tr from-[#3f3e3e] via-[#201f1f] to-[#383737] flex flex-col items-center justify-start mx-auto w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 max-w-2xl min-h-[500px] p-6 sm:p-8 bg-white border shadow-lg rounded-2xl mt-8 md:mt-12 gap-2 sm:gap-6"
-      style={{ borderColor: '#487ad6' }} // Blue border
-    >
-      {/* Cancel Icon */}
-      <button
-        onClick={handleCancel}
-        className="absolute top-4 right-4 text-gray-500 hover:text-red-300 transition-colors duration-200"
-        aria-label="Go back"
-      >
-        <IoMdClose size={28} /> {/* Slightly larger icon */}
-      </button>
-
-      <h3 className="text-sm sm:text-base uppercase font-medium  text-[#efedee]">Agreement</h3>
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 leading-tight mb-4">Terms of Service</h1>
-
-      <p className="text-sm sm:text-base text-center  text-[#efedee] leading-relaxed">
-        We know it's tempting to skip these Terms of Service, but it's important to understand what you can expect from us as you use **ClassPulse** services, and what we expect from you.
-      </p>
-
-      <p className="text-sm sm:text-base text-center  text-[#efedee] leading-relaxed">
-        These Terms reflect the way ClassPulse does business, the laws that apply to our company, and certain principles we believe in. As a result, they help define our relationship with you as you interact with our services. For example, they cover:
-      </p>
-
-      <ol className="list-disc list-inside text-sm sm:text-base text-left px-4 sm:px-6 space-y-2  text-[#efedee]">
-        <li>What you can expect from us — how we provide and improve our services.</li>
-        <li>What we expect from you — the rules for using our services.</li>
-        <li>Content in ClassPulse — who owns what, and intellectual property rights.</li>
-        <li>In case of disputes — your legal rights and what to expect if someone violates these terms.</li>
-      </ol>
-
-      <p className="text-sm sm:text-base text-center  text-[#efedee] leading-relaxed">
-        Understanding these terms is important — to use our service, you must accept them.
-      </p>
-
-      <p className="text-sm sm:text-base text-center  text-[#efedee] leading-relaxed">
-        Besides these terms, we also publish a **Privacy Policy**. While it isn’t part of these terms, we encourage you to read it to better understand how you can update, manage, export, and delete your information.
-      </p>
-
-      <div className="flex flex-col sm:flex-row gap-3 mt-6 w-full justify-center">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4">
+      <div className="relative bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-xl rounded-2xl w-full max-w-2xl p-8 space-y-6">
+        {/* Close Icon */}
         <button
-          onClick={handleCancel} // Assuming "Not right now..." also navigates home
-          className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 text-base font-medium transition-colors duration-200"
+          onClick={handleClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200"
+          aria-label="Close terms"
         >
-          Not right now...
+          <IoMdClose size={28} />
         </button>
-        <button
-          className="w-full sm:w-auto px-6 py-3 rounded-xl  text-[#efedee] text-base font-medium transition-colors duration-200"
-          style={{ backgroundColor: '#487ad6' }} // Blue button
-        >
-          I agree with terms
-        </button>
+
+        {/* Header */}
+        <header className="text-center">
+          <h3 className="text-sm font-medium uppercase text-gray-500 dark:text-gray-400">
+            User Agreement
+          </h3>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-2">
+            School Management Terms & Conditions
+          </h1>
+        </header>
+
+        <hr className="border-t border-gray-200 dark:border-gray-700" />
+
+        {/* Body */}
+        <main className="text-gray-700 dark:text-gray-300 space-y-4 text-sm sm:text-base leading-relaxed">
+          <p>
+            By accessing or using the School Management System ("System"), all users including teachers, students, parents, and administrators agree to comply with these Terms and Conditions. The System is developed and maintained by SchoolTech Solutions ("Provider") to facilitate communication, attendance tracking, academic management, and reporting within the school environment.
+          </p>
+
+          <p>
+            Users must ensure the information they provide is accurate and up-to-date. Unauthorized use of the System or sharing of login credentials is strictly prohibited. Any misuse may result in suspension or permanent termination of access.
+          </p>
+
+          <p>
+            The Provider reserves the right to update or modify these terms at any time without prior notice. Continued use of the System constitutes acceptance of any changes.
+          </p>
+
+          <p>
+            All data stored in the System is subject to the school’s data protection policies. The Provider shall not be held liable for any data loss caused by user negligence or external breaches beyond reasonable control.
+          </p>
+        </main>
+
+        {/* Footer */}
+        <footer className="flex justify-center mt-6">
+          <button className="px-8 py-3 rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-200 text-base font-semibold">
+            I Agree to the Terms
+          </button>
+        </footer>
       </div>
     </div>
   );
 };
 
-export default TermCondition;
+export default TermsAndConditions;
